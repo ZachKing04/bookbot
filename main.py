@@ -1,23 +1,12 @@
 
-def count_words(file_contents: str) -> int:
-    return len(file_contents.split()) 
-
-
 def open_book(file_name: str) -> str:
     with open(f"books/{file_name}.txt", "r") as f:
         return f.read()
 
-'''
-def count_char(file_contents: str) -> dict:
-    letters_used = set()
-    for char in file_contents:
-        if char.lower().isalpha():
-            letters_used.add(char.lower())
-    count_dict = {}
-    for char in letters_used:
-        count_dict[char] = file_contents.count(char)
-    return count_dict
-'''
+
+def count_words(file_contents: str) -> int:
+    return len(file_contents.split()) 
+
 
 def count_char(file_contents: str) -> list:
     letters_used = {char.lower() for char in file_contents if char.lower().isalpha()}
